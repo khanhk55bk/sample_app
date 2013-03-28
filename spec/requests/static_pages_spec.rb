@@ -12,7 +12,7 @@ describe "Static pages" do
 
   describe "Home page" do
     before { visit root_path }
-    let(:heading) {'Sample App'}
+    let(:heading) {'Miropost'}
     let(:page_title) {''}
     let(:heading_) {'| Home'}
     describe "for signed-in users" do
@@ -70,7 +70,7 @@ describe "Static pages" do
     page.should have_selector 'title', text: full_title('Help')
     click_link "Contact"
     page.should have_selector 'title', text: full_title('Contact')
-    click_link "sample app"
-    page.should have_selector 'title', text: "Ruby on Rails Tutorial Sample App"
+    click_link "micropost"
+    page.should have_selector 'title', text: "Miropost like the Twitter"
   end
 end
